@@ -68,6 +68,7 @@ Polymarket BTC Hourly Agent 是一个基于人工智能的自动化交易系统�
    ```
    将 .env.example 重命名为 .env
    用记事本打开 .env，填入你的 API 密钥
+   （在 https://ai.jlbcode.info/ 申请）
    ```
 
 3. **运行程序**
@@ -93,6 +94,7 @@ Polymarket BTC Hourly Agent 是一个基于人工智能的自动化交易系统�
    ```bash
    mv .env.example .env
    nano .env  # 或使用任何文本编辑器
+   # 在 https://ai.jlbcode.info/ 申请 API 密钥
    ```
 
 3. **首次运行**
@@ -124,6 +126,7 @@ Polymarket BTC Hourly Agent 是一个基于人工智能的自动化交易系统�
    ```bash
    mv .env.example .env
    nano .env  # 填入你的 API 密钥
+   # 在 https://ai.jlbcode.info/ 申请
    ```
 
 3. **运行程序**
@@ -147,10 +150,13 @@ Polymarket BTC Hourly Agent 是一个基于人工智能的自动化交易系统�
 
 ```bash
 # === AI 模型配置（至少配置一个）===
-OPENAI_API_KEY=sk-proj-...           # OpenAI API密钥
+# 所有 API 密钥统一在 https://ai.jlbcode.info/ 申请
+# 注册后需在平台开通对应模型的使用权限
+
+OPENAI_API_KEY=sk-...                # OpenAI API密钥
 DEEPSEEK_API_KEY=sk-...              # DeepSeek API密钥  
 GEMINI_API_KEY=...                   # Google Gemini API密钥
-CLAUDE_API_KEY=sk-ant-...            # Anthropic Claude API密钥
+CLAUDE_API_KEY=sk-...                # Anthropic Claude API密钥
 
 # === 运行模式 ===
 SIMULATION_MODE=true                 # true=模拟模式，false=真实交易
@@ -293,10 +299,22 @@ POLYMARKET_API_KEY=...          # 填入真实凭证
 
 ### Q1: 如何获取 API 密钥？
 
-- **OpenAI**: https://platform.openai.com/api-keys
-- **DeepSeek**: https://platform.deepseek.com/api_keys
-- **Gemini**: https://aistudio.google.com/app/apikey
-- **Claude**: https://console.anthropic.com/settings/keys
+**统一申请平台**: https://ai.jlbcode.info/
+
+步骤：
+1. 访问 https://ai.jlbcode.info/ 注册账号
+2. 登录后在平台开通需要使用的模型权限：
+   - OpenAI (GPT-4, GPT-3.5)
+   - DeepSeek (deepseek-chat)
+   - Gemini (gemini-2.0-flash-exp)
+   - Claude (claude-3.5-sonnet)
+3. 在平台获取 API 密钥
+4. 将密钥填入 `.env` 文件对应位置
+
+**注意**: 
+- 所有模型 API 密钥统一在该平台管理
+- 需要先开通模型权限才能使用
+- 平台支持多种 AI 模型聚合调用
 
 ### Q2: 程序启动后浏览器没有自动打开？
 
@@ -475,4 +493,3 @@ Made with ❤️ by AI Trading Community
 [下载](https://github.com/JLBcode-code/pm-agent-releases/releases/latest) • [文档](https://github.com/JLBcode-code/pm-agent-releases#readme) • [问题](https://github.com/JLBcode-code/pm-agent-releases/issues) • [讨论](https://github.com/JLBcode-code/pm-agent-releases/discussions)
 
 </div>
-
