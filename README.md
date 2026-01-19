@@ -149,14 +149,9 @@ Polymarket BTC Hourly Agent 是一个基于人工智能的自动化交易系统�
 ### 必需配置
 
 ```bash
-# === AI 模型配置（至少配置一个）===
-# 所有 API 密钥统一在 https://ai.jlbcode.info/ 申请
-# 注册后需在平台开通对应模型的使用权限
-
-OPENAI_API_KEY=sk-...                # OpenAI API密钥
-DEEPSEEK_API_KEY=sk-...              # DeepSeek API密钥  
-GEMINI_API_KEY=...                   # Google Gemini API密钥
-CLAUDE_API_KEY=sk-...                # Anthropic Claude API密钥
+# 统一API密钥 - 到这个网站申请: https://ai.jlbcode.info/
+# 注册账号后创建令牌，一定要在平台开通对应模型的使用权限并且充值token才能使用
+FASTAPI_KEY=
 
 # === 运行模式 ===
 SIMULATION_MODE=true                 # true=模拟模式，false=真实交易
